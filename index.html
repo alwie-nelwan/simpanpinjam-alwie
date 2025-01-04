@@ -1,0 +1,437 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Elegant Landing Page</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+      header {
+        background: rgba(51, 51, 51, 0.5);
+        backdrop-filter: blur(10px);
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        transition: background 0.3s;
+      }
+      header.scrolled {
+        background: rgba(51, 51, 51, 0.9);
+      }
+      header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      header nav a {
+        color: #fff;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: color 0.3s;
+      }
+      header nav a:hover {
+        color: #ff6347;
+      }
+      .hero {
+        height: 100vh;
+        background: url("download\ \(2\).jpeg") no-repeat center center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-align: center;
+        position: relative;
+      }
+      .hero h1 {
+        font-size: 4em;
+        margin: 0;
+        animation: fadeInDown 1s ease-out;
+      }
+      .hero p {
+        font-size: 1.5em;
+        margin: 20px 0 0;
+        animation: fadeInUp 1s ease-out;
+      }
+      .hero .btn {
+        margin-top: 30px;
+        padding: 10px 20px;
+        background: #ff6347;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 1em;
+        animation: fadeInUp 1s ease-out;
+      }
+      .content {
+        padding: 100px 20px;
+        text-align: center;
+      }
+      .content h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+      }
+      .content p {
+        font-size: 1.2em;
+        margin-bottom: 40px;
+      }
+      .content .cards {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      .content .card {
+        background: #171717;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        margin: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+      }
+      .content .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+      .content .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .content .card h3 {
+        font-size: 1.5em;
+        margin: 20px 0;
+      }
+      .content .card p {
+        padding: 0 20px 20px;
+        font-size: 1em;
+      }
+      .contact-section {
+        padding: 100px 20px;
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+      }
+      .contact-section h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+      }
+      .contact-section p {
+        font-size: 1.2em;
+        margin-bottom: 40px;
+      }
+      .contact-details {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      .contact-details div {
+        margin: 20px;
+        text-align: center;
+      }
+      .contact-details img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin-bottom: 20px;
+      }
+      footer {
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+      }
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes cardClick {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <nav>
+        <div class="logo">
+          <img
+            alt="Company logo with a modern design"
+            class="h-12"
+            height="50"
+            src="https://storage.googleapis.com/a1aa/image/Me38R54V2sQmZi42hrjJWYK0yA4wWfbeQ6BxhhrWqg9YwTBoA.jpg"
+            width="100"
+          />
+        </div>
+        <div class="nav-links">
+          <a href="#home"> Home </a>
+          <a href="#about"> About </a>
+          <a href="#services"> Services</a>
+          <a href="#contact"> Contact </a>
+          <a href="acount.html"> Account </a>
+        </div>
+      </nav>
+    </header>
+    <section class="hero" id="home">
+      <div>
+        <h1>Welcome to Smart Bank</h1>
+        <p>
+          Aplikasi Smart Bank adalah platform perbankan digital inovatif yang
+          dirancang untuk memberikan kemudahan dan kenyamanan dalam mengelola
+          keuangan Anda. Dengan teknologi terkini, aplikasi ini memungkinkan
+          Anda mengakses layanan perbankan kapan saja dan di mana saja melalui
+          perangkat seluler Anda.
+        </p>
+        <button class="btn"><a href="get.html">Get Started</a></button>
+      </div>
+    </section>
+    <section class="content" id="about">
+      <h2>About Us</h2>
+      <p>
+        Aplikasi perbankan kami dirancang untuk memberi Anda pengalaman
+        perbankan yang paling lancar dan aman. Kami berkomitmen untuk membantu
+        Anda mengelola keuangan secara efisien dan efektif.
+      </p>
+      <h3>Our Mission</h3>
+      <p>
+        Misi Kami Memberikan layanan perbankan terbaik kepada klien kami dan
+        membantu mereka mencapai tujuan keuangan mereka.
+      </p>
+
+      <h3>Our Vision</h3>
+      <p>
+        Visi Kami Menjadi aplikasi perbankan terkemuka di industri ini, yang
+        dikenal karena komitmen kami terhadap keunggulan dan inovasi.
+      </p>
+      <h3>Our Values</h3>
+      <p>
+        Nilai-nilai Kami Integritas, Inovasi, dan Kepuasan Pelanggan merupakan
+        inti dari semua yang kami lakukan. Kami berusaha untuk menawarkan
+        layanan terbaik dan memastikan keberhasilan finansial klien kami.
+      </p>
+    </section>
+    <section class="content" id="services">
+      <h2>Our Services</h2>
+      <p>We offer a wide range of services to meet your needs.</p>
+      <div class="cards">
+        <a class="card" href="priority.html">
+          <img alt="Service 1 image" height="200" src="OIP.jpeg" width="300" />
+          <h3>priority</h3>
+          <p>
+            kami menawarkan berbagai layanan perbankan unggulan, termasuk
+            rekening tabungan prioritas, investasi, pinjaman, serta solusi
+            digital yang memudahkan transaksi kapan saja dan di mana saja.
+          </p>
+        </a>
+        <a class="card" href="pinjaman.html">
+          <img
+            alt="Service 2 image"
+            height="200"
+            src="download.jpeg"
+            width="300"
+          />
+          <h3>pinjaman</h3>
+          <p>
+            Pinjaman Priority Bank dirancang untuk memberikan fleksibilitas dan
+            kemudahan bagi nasabah dalam memenuhi berbagai kebutuhan finansial
+            mereka.
+          </p>
+        </a>
+        <a class="card" href="customer.html">
+          <img
+            alt="Service 3 image"
+            height="200"
+            src="download (1).jpeg"
+            width="300"
+          />
+          <h3>customer service</h3>
+          <p>
+            Layanan Customer Service adalah bagian integral dari komitmen kami
+            untuk memberikan pengalaman perbankan yang luar biasa kepada setiap
+            nasabah. Kami memahami bahwa setiap nasabah memiliki kebutuhan dan
+            pertanyaan yang unik, dan tim Customer Service kami hadir untuk
+            memberikan solusi terbaik dengan layanan yang cepat, ramah, dan
+            profesional.
+          </p>
+        </a>
+        <a class="card" href="m-banking.html">
+          <img
+            alt="Service 4 image"
+            height="200"
+            src="download (3).jpeg"
+            width="300"
+          />
+          <h3>m-banking</h3>
+          <p>
+            M-Banking (Mobile Banking) adalah layanan perbankan digital yang
+            memungkinkan nasabah melakukan berbagai transaksi keuangan melalui
+            aplikasi pada perangkat seluler. Dirancang untuk memberikan
+            kemudahan dan kenyamanan, M-Banking menghadirkan solusi perbankan
+            yang cepat, aman, dan dapat diakses kapan saja serta di mana saja.
+          </p>
+        </a>
+      </div>
+    </section>
+    <section class="contact-section" id="contact">
+      <h2>Contact Us</h2>
+      <p>
+        Kami ingin sekali mendengar kabar dari Anda! Hubungi kami melalui salah
+        satu metode berikut.
+      </p>
+      <div class="contact-details">
+        <div>
+          <img
+            alt="Phone icon"
+            height="100"
+            src="https://storage.googleapis.com/a1aa/image/EdlZSPUJHYqKGZa5iQzsVGICe7rpyZn75MXdfuDFfJmjaUBoA.jpg"
+            width="100"
+          />
+          <h3>Phone</h3>
+          <p>089674260766</p>
+        </div>
+        <div>
+          <img
+            alt="Email icon"
+            height="100"
+            src="https://storage.googleapis.com/a1aa/image/ffPA68V8Y0pg90IdGnRJ3XAe9Zp1eJRARUORavXDEGKw0oCQB.jpg"
+            width="100"
+          />
+          <h3>Email</h3>
+          <p>alwienelwanawibie@gmail.com</p>
+        </div>
+        <div>
+          <img
+            alt="Location icon"
+            height="100"
+            src="https://storage.googleapis.com/a1aa/image/n2eWXecbPOo7CEfkHfqRjjkGre71s4ZoZrJ6BLZaBZDxpRFgC.jpg"
+            width="100"
+          />
+          <h3>Address</h3>
+          <p>1234 Street Jl.harapan, Depok, IDN</p>
+        </div>
+        <div>
+          <img
+            alt="Social media icons"
+            height="100"
+            src="https://storage.googleapis.com/a1aa/image/4xiGrqLYMz7BJlNZ66zozurCEfHPQCZk6DOpFuhNE4boGVAKA.jpg"
+            width="100"
+          />
+          <h3>Social Media</h3>
+          <p>Follow us on our social media channels.</p>
+        </div>
+      </div>
+
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <title>Footer Section</title>
+          <script src="https://cdn.tailwindcss.com"></script>
+        </head>
+        <body class="bg-[#0A1F33] text-white">
+          <footer class="py-4">
+            <div class="border-t border-gray-600"></div>
+            <div
+              class="container mx-auto flex flex-col md:flex-row justify-between items-center text-sm mt-4"
+            >
+              <div class="mb-2 md:mb-0">
+                smart bank berizin dan diawasi oleh Otoritas Jasa Keuangan &
+                Bank Indonesia
+              </div>
+              <div class="mb-2 md:mb-0">
+                smart merupakan peserta penjaminan LPS
+              </div>
+              <div class="flex space-x-4">
+                <a href="#" class="hover:underline">SBDK</a>
+                <span>|</span>
+                <a href="#" class="hover:underline">Kebijakan</a>
+                <span>|</span>
+                <a href="#" class="hover:underline">Syarat dan Ketentuan</a>
+              </div>
+            </div>
+          </footer>
+        </body>
+      </html>
+    </section>
+    <footer>
+      <p>© 2025 Our Company. All rights reserved.</p>
+    </footer>
+    <script>
+      window.addEventListener("scroll", function () {
+        const header = document.getElementById("header");
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      function cardClick(card) {
+        card.style.animation = "cardClick 0.5s ease";
+        card.addEventListener("animationend", () => {
+          card.style.animation = "";
+        });
+      }
+
+      function changeHeroBackground(url) {
+        document.querySelector(".hero").style.backgroundImage = `url(${url})`;
+      }
+    </script>
+  </body>
+</html>

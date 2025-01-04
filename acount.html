@@ -1,0 +1,137 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Bank Account Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <header class="bg-blue-600 text-white p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Akun saya</h1>
+      </div>
+    </header>
+    <main class="container mx-auto mt-8 p-4">
+      <section class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <img
+            alt="Profile picture of the account holder"
+            class="rounded-full w-24 h-24 mr-4"
+            height="100"
+            src="robert-downey-jr.jpg"
+            width="100"
+          />
+          <div>
+            <h2 class="text-2xl font-bold">ALWIE NELWAN AWIBIE</h2>
+            <p class="text-gray-600">Nomor akun: 123456789</p>
+            <a class="text-blue-600 hover:underline" href="login.html">
+              Logout
+            </a>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-blue-50 p-4 rounded-lg shadow">
+            <h3 class="text-xl font-semibold mb-2">Saldo Akun</h3>
+            <p class="text-3xl font-bold text-blue-600">Rp 75.000.000,00</p>
+          </div>
+          <div class="bg-blue-50 p-4 rounded-lg shadow">
+            <h3 class="text-xl font-semibold mb-2">Transaksi Terbaru</h3>
+            <ul class="space-y-2">
+              <li class="flex justify-between">
+                <span> Toko online </span>
+                <span> -Rp75.000,00 </span>
+              </li>
+              <li class="flex justify-between">
+                <span> Deposit Gaji </span>
+                <span> +Rp8.000.000,00 </span>
+              </li>
+              <li class="flex justify-between">
+                <span> Makanan</span>
+                <span> -Rp50.000,00 </span>
+              </li>
+              <li class="flex justify-between">
+                <span> Tagihan Listrik </span>
+                <span> -Rp300.000,00 </span>
+              </li>
+              <li class="flex justify-between">
+                <span> Gym Membership </span>
+                <span> -Rp200.000,00 </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold mb-4">Rincian Akun</h2>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Informasi</h3>
+              <p>
+                <strong> Nama: </strong>
+                ALWIE NELWAN AWIBIE
+              </p>
+              <p>
+                <strong> Email: </strong>
+                alwienelwanawibie@gmail.com
+              </p>
+              <p>
+                <strong> Telepon: </strong>
+                089674260766
+              </p>
+              <p>
+                <strong> Alamat:</strong>
+                Jl.harapan, DEPOK, IND
+              </p>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Informasi Perbankan</h3>
+              <p>
+                <strong> Nomor Rekening: </strong>
+                123456789
+              </p>
+              <p>
+                <strong> Jenis Akun: </strong>
+                Checking
+              </p>
+              <p>
+                <strong> Branch: </strong>
+                Anytown Depok
+              </p>
+              <p>
+                <strong> IFSC Code: </strong>
+                ABCD0123456
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="mt-8">
+        <button
+          class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          onclick="history.back()"
+        >
+          kembali
+        </button>
+      </div>
+    </main>
+    <footer class="bg-blue-600 text-white p-4 mt-8">
+      <div class="container mx-auto text-center">
+        <p>© 2025 smart Bank. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
